@@ -1,0 +1,34 @@
+{
+  "name": "vK-ToDo",
+  "version": "1.0.0",
+  "description": "Full Stack Errand App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuoPlayground/vK-ToDo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuoPlayground/vK-ToDo/issues"
+  },
+  "homepage": "https://github.com/DuoPlayground/vK-ToDo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "knex": "^0.21.1",
+    "knex-cleaner": "^1.3.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.2.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
