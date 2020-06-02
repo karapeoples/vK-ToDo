@@ -2,61 +2,17 @@
 
 require('dotenv').config()
 
+// DATABASE_URL env should follow this format:
+// postgres://user_name:password@ipaddress:port/table
+// Example: postgres://jimmy:password@localhost:5432/pg_database
+
 module.exports = {
 	development: {
 		client: 'pg',
-		connection: {
-			host: 'localhost',
-			database: 'tasks',
-			user: 'postgres',
-			password: 'Scorpio1978',
-		},
-		pool: {
-			min: 2,
-			max: 10,
-		},
-		migrations: {
-			directory: './data/migrations',
-			tableName: 'knex_migrations',
-		},
-		seeds: {
-			directory: './data/seeds',
-		},
-	},
-
-	testing: {
-		client: 'pg',
-		connection: { host: 'localhost', database: 'tasks', user: 'postgres', password: 'Scorpio1978' },
-		pool: {
-			min: 2,
-			max: 10,
-		},
-		migrations: {
-			directory: './data/migrations',
-			tableName: 'knex_migrations',
-		},
-		seeds: {
-			directory: './data/seeds',
-		},
-	},
-
-	production: {
-		client: 'pg',
-		connection: { host: 'localhost', database: 'tasks', user: 'postgres', password: 'Scorpio1978' },
-		pool: {
-			min: 2,
-			max: 10,
-		},
-		migrations: {
-			directory: './data/migrations',
-			tableName: 'knex_migrations',
-		},
-		seeds: {
-			directory: './data/seeds',
-		},
+		// 🔻 Points to our local Postgresql database
+		connection: process.env.DATABASE_URL,
 	},
 }
-
 
 
 
