@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { GET_TASKS, SET_ERR } from './actions'
+import { GET_TASKS, SET_ERR, ADD_TASKS, UPDATE_TASKS } from './actions'
 
 
 const initialState = {
@@ -11,20 +11,31 @@ const initialState = {
 
 const reducer = (state=initialState, action)=>{
   switch (action.type) {
-    case GET_TASKS:
+			case GET_TASKS:
+				return {
+					...state,
+					tasks: action.payload,
+				}
+			case SET_ERR:
+				return {
+					...state,
+					error: action.payload,
+				}
+			case ADD_TASKS:
+				return {
+					...state,
+					tasks: [...state.tasks, action.payload],
+				}
+    case UPDATE_TASKS:
+      const newTasksArray = state.tasks.filter(task => task.id !== action.payload.id)
       return {
         ...state,
-        tasks: action.payload
+        tasks: [...newTasksArray, action.payload],
       };
-    case SET_ERR:
-      return {
-        ...state,
-        error: action.payload
-    };
-    
-    default:
-      return state; 
-  }
+
+			default:
+				return state
+		}
   
 }
 

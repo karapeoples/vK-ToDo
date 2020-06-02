@@ -1,13 +1,16 @@
 // Update with your config settings.
 
+
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     useNullAsDefault: true,
     connection: {
-      filename: './data/errands.db3'
-    },
+    database: 'tasks',
+    user: 'postgres',
+      password: 'Scorpio1978',
+  },
     
     migrations: {
       directory: './data/migrations'
@@ -21,10 +24,5 @@ module.exports = {
 
 
 
-  /* connection: {
-    database: 'my_db',
-    user: 'username',
-    password: 'password'
-  }
- */
+  
 
