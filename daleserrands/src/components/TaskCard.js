@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 
 const TaskCard = ({ errand, desc, id }) => {
-  const server = 'http://localhost:4994'
+  const server = 'https://stormy-shelf-32639.herokuapp.com'
   const [taskToEdit, setTaskToEdit] = useState({
     errand: '',
     errand_desc:''

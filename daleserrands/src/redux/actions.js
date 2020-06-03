@@ -1,5 +1,5 @@
 import axios from 'axios'
-const server = 'http://localhost:4994'
+const server = 'https://stormy-shelf-32639.herokuapp.com'
 
 export const GET_TASKS = 'GET_TASKS'
 export const SET_ERR = 'SET_ERR'
