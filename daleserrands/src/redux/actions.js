@@ -24,7 +24,7 @@ export const addErrands = (newTask) => (dispatch) => {
 	axios
 		.post(`${server}/tasks`, newTask)
 		.then((res) => {
-			dispatch({ type: ADD_TASKS, payload: [res.data] })
+			dispatch({ type: ADD_TASKS, payload: res.data.body })
 		})
     .catch((err) => {
 			dispatch({ type: SET_ERR, payload: 'Error Adding Tasks' })
