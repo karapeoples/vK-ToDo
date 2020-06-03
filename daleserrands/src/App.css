@@ -1,16 +1,58 @@
+:root{
+  --hunter-green: #054905;
+  --light-brown: #894e00;
+  --dark-brown: #4c2b00;
+  --white: #fff;
+  --errand-font:'Caveat Brush', cursive;
+  --notes-font: 'Dokdo', cursive;
+}
+
 .App {
   text-align: center;
+  font-size: 62.5%;
 }
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--dark-brown);
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
+  
+}
+.App-header .link {
+  font-family: var(--notes-font);
+  color: var(--white);
+  text-decoration:none;
 }
 
+.card-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--errand-font);
+  font-size: 2.5rem;
+  color: var(--hunter-green);
+}
+.errand-title{
+  width: 90%;
+}
+.del-btn{
+  width: 10%;
+}
+
+.card-body{
+  font-size: 1.5rem;
+  font-familY:var(--notes-font);
+  color: var(--light-brown);
+}
+.edit-btn{
+  background-color: var(--hunter-green) !important
+}
+
+.eagle-img{
+  width: 50%;
+}

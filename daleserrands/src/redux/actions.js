@@ -1,4 +1,5 @@
 import axios from 'axios'
+//const server = 'http://localhost:4994'
 const server = 'https://stormy-shelf-32639.herokuapp.com'
 
 export const GET_TASKS = 'GET_TASKS'
@@ -24,7 +25,7 @@ export const addErrands = (newTask) => (dispatch) => {
 	axios
 		.post(`${server}/tasks`, newTask)
 		.then((res) => {
-			dispatch({ type: ADD_TASKS, payload: res.data.body })
+			dispatch({ type: ADD_TASKS, payload: [res.data.body] })
 		})
     .catch((err) => {
 			dispatch({ type: SET_ERR, payload: 'Error Adding Tasks' })

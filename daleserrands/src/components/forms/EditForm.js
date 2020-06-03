@@ -20,11 +20,12 @@ const EditForm = ({ taskToEdit, setTaskToEdit, setTurn }) => {
 	}
 
   return (
-				<form onSubmit={handleSubmit}>
-			<input type='text' name='errand' value={taskToEdit.errand} onChange={onChange} />
-			<input type='text' name='errand_desc' value={taskToEdit.errand_desc} onChange={onChange} />
-			<button>Submit Changes</button>
-				</form>
+			<form onSubmit={handleSubmit}>
+				<input type='text' name='errand' value={taskToEdit.errand} onChange={onChange} />
+				<input type='text' name='errand_desc' value={taskToEdit.errand_desc} onChange={onChange} />
+				<button>Submit Changes</button>
+			<button onChange={() => { setTurn(false) }}>Cancel</button>
+			</form>
 		)
 }
 
