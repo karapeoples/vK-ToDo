@@ -27,7 +27,7 @@ const AddForm = () => {
   }
 
   return (
-			<form onSubmit={onSubmit}>
+			<form onSubmit={onSubmit}className='addForm'>
 				<input
 					type='text'
 					name='errand'
@@ -35,7 +35,7 @@ const AddForm = () => {
 					placeholder='What is the Title of your New Errand'
 					onChange={onChange}
 				/>
-				<input
+				<textarea
 					type='text'
 					name='errand_desc'
 					value={newTask.errand_desc}

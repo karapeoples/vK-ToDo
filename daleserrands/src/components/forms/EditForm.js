@@ -20,9 +20,9 @@ const EditForm = ({ taskToEdit, setTaskToEdit, setTurn }) => {
 	}
 
   return (
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit} className='editForm'>
 				<input type='text' name='errand' value={taskToEdit.errand} onChange={onChange} />
-				<input type='text' name='errand_desc' value={taskToEdit.errand_desc} onChange={onChange} />
+				<textarea type='text' name='errand_desc' value={taskToEdit.errand_desc} onChange={onChange} />
 				<button>Submit Changes</button>
 			<button onChange={() => { setTurn(false) }}>Cancel</button>
 			</form>
