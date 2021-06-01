@@ -51,12 +51,12 @@ const TaskCard = ({ errand, desc, id }) => {
           <CardTitle className='errand-title'>{errand}</CardTitle>
               <Button className='del-btn' size='sm' color='danger' onClick={handleDelete}>X</Button>
             </CardHeader>
-            
+
             <CardBody className='card-body'>
               <p>{desc}</p>
             <Button size='sm' className='edit-btn' onClick={handleClick}>Edit</Button>
               </CardBody>
-            
+
 				</Card>
 			)}
 		</section>
